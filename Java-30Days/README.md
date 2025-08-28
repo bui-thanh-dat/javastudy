@@ -80,7 +80,6 @@ Sau 30 ngày, bạn sẽ có thể:
 - Tạo giao diện người dùng
 - Phát triển ứng dụng hoàn chỉnh
 
-## 💡 Khích Lệ Học Tập
 
 ## 🔥 Bật chế độ Chiến!
 
