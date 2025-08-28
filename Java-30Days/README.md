@@ -80,6 +80,16 @@ Sau 30 ngày, bạn sẽ có thể:
 - Tạo giao diện người dùng
 - Phát triển ứng dụng hoàn chỉnh
 
+## 💡 Khích Lệ Học Tập
+
+## 🔥 Bật chế độ Chiến!
+
+- Mỗi ngày một bước nhỏ, sau 30 ngày bạn sẽ đi rất xa.
+- Code nhiều hơn mỗi ngày, kỹ năng sẽ nói thay lời bạn.
+- Sai cũng được, miễn là bạn học được điều mới.
+- Đừng đợi động lực, hãy tạo thói quen.
+- Học đều – làm bài – thử thách – ôn tập – lặp lại!
+
 ## 📞 Hỗ Trợ
 
 Nếu gặp khó khăn trong quá trình học:

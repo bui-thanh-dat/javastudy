@@ -105,3 +105,10 @@ Tuần thứ hai sẽ giúp bạn:
 ---
 
 **Chúc bạn thành công với OOP! 🚀**
+
+## 🔥 Bật chế độ Chiến!
+
+- Hiểu bản chất quan trọng hơn thuộc lòng cú pháp.
+- Dùng OOP để làm code rõ ràng, không phải phức tạp hơn.
+- Refactor từng chút – chất lượng tăng dần.
+- Học nguyên lý, thực hành đều đặn.

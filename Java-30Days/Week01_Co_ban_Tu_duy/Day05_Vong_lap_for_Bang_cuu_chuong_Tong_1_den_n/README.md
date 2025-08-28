@@ -397,6 +397,12 @@ for (int i = 1; i <= 10; i++) {
 }
 ```
 
+## 🔥 Bật chế độ Chiến!
+
+- Lặp lại đúng cách để đi nhanh và xa.
+- Mỗi vòng lặp là một cơ hội tối ưu.
+- Kiên trì – Chính xác – Tối giản.
+
 ## 🎯 Checklist Hoàn Thành
 
 - [ ] Hiểu cấu trúc vòng lặp for cơ bản

@@ -438,6 +438,12 @@ if (score < 0 || score > 10) {
 - [ ] Hoàn thành challenges
 - [ ] Áp dụng best practices
 
+## 🔥 Bật chế độ Chiến!
+
+- Logic tốt, quyết định đúng.
+- Chia bài toán lớn thành nhiều điều kiện nhỏ.
+- Cứ viết, rồi refactor.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java Control Flow](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)

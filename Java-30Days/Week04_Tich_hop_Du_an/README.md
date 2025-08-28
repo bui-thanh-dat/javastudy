@@ -175,3 +175,10 @@ java -jar MyApp.jar
 ---
 
 **Chúc mừng bạn đã hoàn thành khóa học Java 30 ngày! 🎉**
+
+## 🔥 Bật chế độ Chiến!
+
+- Kết nối kiến thức để tạo ra sản phẩm.
+- Làm từ đơn giản đến hoàn chỉnh, từng bước một.
+- Test sớm – test thường xuyên – test tự động.
+- Viết ít nhưng đúng, chạy ổn định mới là giỏi.

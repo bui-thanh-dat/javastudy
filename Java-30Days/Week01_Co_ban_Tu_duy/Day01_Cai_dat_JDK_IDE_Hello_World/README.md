@@ -158,6 +158,12 @@ public class SimpleMenu {
 - [ ] Hoàn thành các bài tập thực hành
 - [ ] Thử sức với challenge
 
+## 🔥 Bật chế độ Chiến!
+
+- Bắt đầu hôm nay tốt hơn hoàn hảo ngày mai.
+- Cài xong là chạy, chạy xong là thử, thử rồi là hiểu.
+- Đường dài đi bằng từng lệnh nhỏ.
+
 ---
 
 **Chúc bạn có một ngày học tập hiệu quả! 🚀**

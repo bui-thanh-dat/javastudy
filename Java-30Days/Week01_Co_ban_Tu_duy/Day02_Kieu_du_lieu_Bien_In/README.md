@@ -322,6 +322,12 @@ scanner.close();
 - [ ] Thử sức với challenges
 - [ ] Hiểu type casting và wrapper classes
 
+## 🔥 Bật chế độ Chiến!
+
+- Hiểu dữ liệu để làm chủ chương trình.
+- Biến đặt tên rõ ràng, ý tưởng sẽ rõ ràng.
+- Thử – Sai – Sửa – Giỏi.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)

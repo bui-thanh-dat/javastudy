@@ -524,6 +524,12 @@ while (true) {
 - [ ] Hoàn thành challenges
 - [ ] Áp dụng best practices
 
+## 🔥 Bật chế độ Chiến!
+
+- Luôn có điểm dừng cho mọi vòng lặp – cả trong học tập.
+- Thắng không phải do may mắn, mà do luyện tập.
+- Cứ thử thêm một lần nữa.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java While Loop](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)

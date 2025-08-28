@@ -415,6 +415,12 @@ config.setMaximumPoolSize(10);
 HikariDataSource dataSource = new HikariDataSource(config);
 ```
 
+## 🔥 Bật chế độ Chiến!
+
+- Kết nối thành công không chỉ là driver – mà là tư duy hệ thống.
+- Từng câu lệnh SQL là một bước tiến gần sản phẩm.
+- Lỗi hôm nay là kinh nghiệm ngày mai.
+
 ## 🎯 Checklist Hoàn Thành
 
 - [ ] Cài đặt MySQL và JDBC driver

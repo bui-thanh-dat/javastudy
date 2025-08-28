@@ -254,6 +254,12 @@ Mỗi class chỉ nên có một trách nhiệm duy nhất.
 - [ ] Hiểu access modifiers
 - [ ] Thực hành method overloading
 
+## 🔥 Bật chế độ Chiến!
+
+- Nghĩ bằng đối tượng, viết bằng hành động.
+- Mọi class tốt bắt đầu từ tên tốt.
+- Tích lũy từng ví dụ nhỏ – thành hệ thống lớn.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java Classes and Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/)

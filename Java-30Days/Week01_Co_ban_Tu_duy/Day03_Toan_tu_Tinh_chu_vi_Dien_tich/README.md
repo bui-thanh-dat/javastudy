@@ -362,6 +362,12 @@ System.out.printf("Diện tích: %.2f cm²\n", area);
 - [ ] Hoàn thành challenges
 - [ ] Áp dụng best practices
 
+## 🔥 Bật chế độ Chiến!
+
+- Toán tử chỉ là công cụ, tư duy mới là chìa khóa.
+- Đừng sợ công thức, sợ nhất là không thử.
+- Tính đúng từ những ví dụ nhỏ, rồi mở rộng dần.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)

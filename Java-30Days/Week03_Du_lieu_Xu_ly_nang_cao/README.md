@@ -144,3 +144,10 @@ com.company.project/
 ---
 
 **Chúc bạn thành công với xử lý dữ liệu! 🚀**
+
+## 🔥 Bật chế độ Chiến!
+
+- Cấu trúc dữ liệu đúng giúp mọi việc đúng.
+- Hiểu thời gian – không gian, tối ưu tự đến.
+- Đọc lỗi bình tĩnh, sửa lỗi cẩn thận.
+- Code sạch là thói quen, không phải nhiệm vụ.

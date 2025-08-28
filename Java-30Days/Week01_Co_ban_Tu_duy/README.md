@@ -84,3 +84,10 @@ Tuần đầu tiên sẽ giúp bạn:
 ---
 
 **Chúc bạn học tập hiệu quả! 🚀**
+
+## 🔥 Bật chế độ Chiến!
+
+- Bắt đầu chậm nhưng chắc – tích lũy tạo nên khác biệt.
+- Viết code mỗi ngày, dù chỉ 10 dòng.
+- Không hiểu thì hỏi, không rõ thì thử.
+- Kiên trì hôm nay, tự tin ngày mai.

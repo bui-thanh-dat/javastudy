@@ -334,6 +334,12 @@ public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
 - [ ] Hiểu độ phức tạp thuật toán
 - [ ] Hoàn thành challenges
 
+## 🔥 Bật chế độ Chiến!
+
+- Dữ liệu đúng cấu trúc – thuật toán sẽ hiệu quả.
+- Hiểu độ phức tạp – tiết kiệm thời gian.
+- Viết chậm để chạy nhanh.
+
 ## 📚 Tài Liệu Tham Khảo
 
 - [Java Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)

@@ -785,3 +785,9 @@ for (int num : numbers) {
 
 **Chúc mừng bạn đã hoàn thành Tuần 1! 🎉**
 **Sẵn sàng cho Tuần 2 - Lập trình hướng đối tượng! 🚀**
+
+## 🔥 Bật chế độ Chiến!
+
+- Ôn tập để nhớ lâu, thực hành để làm giỏi.
+- Hôm nay gọn gàng, mai làm dự án.
+- Bạn đang tiến bộ từng ngày.
