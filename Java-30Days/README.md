@@ -1,44 +1,92 @@
-﻿# Lộ trình Java 30 ngày
+﻿# 🚀 Lộ Trình Học Java 30 Ngày
 
-- Tuần 1: Cú pháp cơ bản và tư duy lập trình
-- Tuần 2: Lập trình hướng đối tượng (OOP)
-- Tuần 3: Dữ liệu và xử lý nâng cao
-- Tuần 4: Tích hợp và dự án nhỏ
+## 📋 Tổng Quan Khóa Học
 
-## Điều hướng nhanh
-- Week01_Co_ban_Tu_duy
-  - Day01_Cai_dat_JDK_IDE_Hello_World
-  - Day02_Kieu_du_lieu_Bien_In
-  - Day03_Toan_tu_Tinh_chu_vi_Dien_tich
-  - Day04_Dieu_kien_if_else_switch_Xep_loai_diem
-  - Day05_Vong_lap_for_Bang_cuu_chuong_Tong_1_den_n
-  - Day06_Vong_lap_while_do_while_Doansongau_nhien
-  - Day07_On_tap_Menu_console
-- Week02_OOP
-  - Day08_Class_Object_Student
-  - Day09_Constructor_Getter_Setter
-  - Day10_This_Static_Dem_so_doi_tuong
-  - Day11_Ke_thua_Person_Employee
-  - Day12_Ghi_de_Phuong_thuc_Shape_Circle_Rectangle
-  - Day13_Da_hinh_Mang_Shape
-  - Day14_On_tap_Quan_ly_danh_ba
-- Week03_Du_lieu_Xu_ly_nang_cao
-  - Day15_Array_Tim_max_Sap_xep
-  - Day16_ArrayList_Quan_ly_hoc_sinh
-  - Day17_HashMap_HashSet_Dem_tan_suat_tu
-  - Day18_Ngoai_le_Try_Catch_Chia_cho_0
-  - Day19_File_IO_Doc_Ghi
-  - Day20_Package_Access_Modifier_To_chuc_code
-  - Day21_On_tap_Todo_List_File
-- Week04_Tich_hop_Du_an
-  - Day22_JDBC_Insert_MySQL
-  - Day23_JDBC_Select_MySQL
-  - Day24_JDBC_Update_Delete
-  - Day25_Mini_app_CRUD_Sinh_vien
-  - Day26_Swing_Giao_dien_co_ban
-  - Day27_Swing_Nang_cao_Button_Textbox_List
-  - Day28_Tich_hop_OOP_JDBC_Swing
-  - Day29_Du_an_nho (Quan_ly_sinh_vien_CRUD_DB, Quan_ly_sach_CRUD_DB)
-  - Day30_Hoan_thien_Clean_Code_Tai_lieu
+Đây là lộ trình học Java từ cơ bản đến nâng cao trong 30 ngày, được thiết kế để giúp bạn:
+- Nắm vững kiến thức cơ bản về Java
+- Hiểu sâu về lập trình hướng đối tượng (OOP)
+- Thực hành với cơ sở dữ liệu và giao diện người dùng
+- Xây dựng các dự án thực tế
 
-> Gợi ý: Mỗi ngày đọc README trong thư mục tương ứng, làm bài tập, và lưu code trong thư mục src.
+## 🎯 Mục Tiêu Học Tập
+
+- ✅ Hiểu và sử dụng thành thạo cú pháp Java cơ bản
+- ✅ Nắm vững các khái niệm OOP: Class, Object, Inheritance, Polymorphism
+- ✅ Thực hành với cấu trúc dữ liệu và thuật toán
+- ✅ Làm việc với cơ sở dữ liệu MySQL qua JDBC
+- ✅ Tạo giao diện người dùng với Swing
+- ✅ Xây dựng ứng dụng hoàn chỉnh
+
+## 📚 Cấu Trúc Khóa Học
+
+### **Tuần 1: Cơ Bản & Tư Duy Lập Trình**
+- **Day 01**: Cài đặt JDK, IDE và Hello World
+- **Day 02**: Kiểu dữ liệu, Biến và In
+- **Day 03**: Toán tử, Tính chu vi, Diện tích
+- **Day 04**: Điều kiện if-else, switch, Xếp loại điểm
+- **Day 05**: Vòng lặp for, Bảng cửu chương, Tổng 1 đến n
+- **Day 06**: Vòng lặp while, do-while, Đoán số ngẫu nhiên
+- **Day 07**: Ôn tập, Menu console
+
+### **Tuần 2: Lập Trình Hướng Đối Tượng (OOP)**
+- **Day 08**: Class, Object, Student
+- **Day 09**: Constructor, Getter, Setter
+- **Day 10**: This, Static, Đếm số đối tượng
+- **Day 11**: Kế thừa, Person, Employee
+- **Day 12**: Ghi đè phương thức, Shape, Circle, Rectangle
+- **Day 13**: Đa hình, Mảng Shape
+- **Day 14**: Ôn tập, Quản lý danh bạ
+
+### **Tuần 3: Dữ Liệu & Xử Lý Nâng Cao**
+- **Day 15**: Array, Tìm max, Sắp xếp
+- **Day 16**: ArrayList, Quản lý học sinh
+- **Day 17**: HashMap, HashSet, Đếm tần suất từ
+- **Day 18**: Ngoại lệ, Try-Catch, Chia cho 0
+- **Day 19**: File I/O, Đọc, Ghi
+- **Day 20**: Package, Access Modifier, Tổ chức code
+- **Day 21**: Ôn tập, Todo List File
+
+### **Tuần 4: Tích Hợp & Dự Án**
+- **Day 22**: JDBC Insert MySQL
+- **Day 23**: JDBC Select MySQL
+- **Day 24**: JDBC Update, Delete
+- **Day 25**: Mini app CRUD Sinh viên
+- **Day 26**: Swing, Giao diện cơ bản
+- **Day 27**: Swing nâng cao, Button, Textbox, List
+- **Day 28**: Tích hợp OOP, JDBC, Swing
+- **Day 29**: Dự án nhỏ
+- **Day 30**: Hoàn thiện, Clean Code, Tài liệu
+
+## 🛠️ Yêu Cầu Hệ Thống
+
+- **JDK**: Phiên bản 8 trở lên
+- **IDE**: IntelliJ IDEA, Eclipse, hoặc VS Code
+- **Database**: MySQL
+- **Kiến thức**: Không yêu cầu kiến thức lập trình trước
+
+## 📖 Cách Sử Dụng
+
+1. **Mỗi ngày**: Đọc README của ngày tương ứng
+2. **Thực hành**: Làm các bài tập và ví dụ
+3. **Challenge**: Thử sức với các thử thách nâng cao
+4. **Ôn tập**: Xem lại kiến thức cuối tuần
+
+## 🎯 Kết Quả Mong Đợi
+
+Sau 30 ngày, bạn sẽ có thể:
+- Viết code Java thành thạo
+- Thiết kế và xây dựng ứng dụng OOP
+- Làm việc với cơ sở dữ liệu
+- Tạo giao diện người dùng
+- Phát triển ứng dụng hoàn chỉnh
+
+## 📞 Hỗ Trợ
+
+Nếu gặp khó khăn trong quá trình học:
+- Đọc kỹ README của từng ngày
+- Thực hành nhiều lần
+- Tìm hiểu thêm tài liệu tham khảo
+
+---
+
+**Chúc bạn học tập hiệu quả! 🎉**
