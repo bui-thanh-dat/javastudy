@@ -1,118 +1,89 @@
-# 📘 BÀI TẬP OOP – JAVA CORE
+# 📘 ĐỀ BÀI OOP – JAVA CORE
 
 ---
 
-## 🧩 Câu 1 (2 điểm)
-### Tạo lớp trừu tượng `Person`
+## Câu 1 (2 điểm)
 
-**Thuộc tính:**
-- `name` (String): Họ tên
-- `ns` (int): Năm sinh
+Tạo lớp trừu tượng **Person** gồm:
 
-**Phương thức:**
-- `void nhap()` : Nhập thông tin từ bàn phím  
-- `void in()` : In thông tin ra màn hình  
-- `abstract double tinhLuong()` : Tính lương  
+### Thuộc tính
+- `name` (String): họ tên  
+- `ns` (int): năm sinh  
+
+### Phương thức
+- `void nhap()` : nhập thông tin từ bàn phím  
+- `void in()` : in thông tin ra màn hình  
+- `abstract double tinhLuong()` : tính lương  
 
 ---
 
-## 🧩 Câu 2 (3 điểm)
-### Tạo lớp `Worker` kế thừa `Person`
+## Câu 2 (3 điểm)
 
-**Thuộc tính riêng:**
-- `bac` (int): Bậc
-- `soNgayCong` (int): Số ngày công
+Tạo lớp **Worker** kế thừa **Person**, gồm:
 
-**Ghi đè các phương thức:**
-- `nhap()`
-- `in()`
-- `tinhLuong()`
+### Thuộc tính riêng
+- `bac` (int): bậc  
+- `soNgayCong` (int): số ngày công  
 
-**Công thức lương:**
-```text
+### Ghi đè
+- `nhap()`  
+- `in()`  
+- `tinhLuong()`  
+
+### Công thức lương
 Lương = soNgayCong * 250000 + bac * 500000
-🧩 Câu 3 (3 điểm)
-Tạo lớp Manager kế thừa Person
+---
 
-Thuộc tính riêng:
+## Câu 3 (3 điểm)
 
-phuCap (double): Phụ cấp
+Tạo lớp **Manager** kế thừa **Person**, gồm:
 
-Ghi đè các phương thức:
+### Thuộc tính riêng
+- `phuCap` (double)  
 
-nhap()
+### Ghi đè
+- `nhap()`  
+- `in()`  
+- `tinhLuong()`  
 
-in()
-
-tinhLuong()
-
-Công thức lương:
-
+### Công thức lương
 Lương = phuCap + 20000000
+---
 
-🧩 Câu 4 (2 điểm)
-Tạo lớp CONGTY
+## Câu 4 (2 điểm)
 
-Thuộc tính:
+Tạo lớp **CONGTY** gồm:
 
-ArrayList<Person> ds
+### Thuộc tính
+- `ArrayList<Person> ds`  
 
-Phương thức:
+### Phương thức
 
-🔹 void nhap()
+#### `void nhap()`
+- Nhập số lượng nhân sự  
+- Với mỗi người, hỏi loại:
+  - `1`: Worker  
+  - `2`: Manager  
+- Thêm vào danh sách  
 
-Nhập số lượng nhân sự
+#### `void in()`
+- In danh sách nhân sự  
+- In lương của từng người  
 
-Với mỗi người, hỏi loại:
-
-1: Worker
-
-2: Manager
-
-Thêm đối tượng vào danh sách
-
-🔹 void in()
-
-In danh sách nhân sự
-
-In lương của từng người
-
-🔹 double tongLuong()
-
-Tính tổng lương toàn công ty
-
-🧩 Câu 5 (Bonus +1 điểm)
-
-In ra người có lương cao nhất
-
-📌 YÊU CẦU CHẤM ĐIỂM (RẤT QUAN TRỌNG)
-
-Sử dụng ArrayList<Person>
-
-Áp dụng đa hình:
-
-Person p = new Worker();
-
-
-Không dùng if để tính lương
-
-Code chạy được
-
+#### `double tongLuong()`
+- Tính tổng lương toàn công ty  
 
 ---
 
-## ✅ CÁI NÀY ĐÚNG CHUẨN GÌ?
-- ✔ Chuẩn README GitHub
-- ✔ Đúng format bài thi Java OOP
-- ✔ Giảng viên / người chấm đọc là hiểu ngay
-- ✔ Thể hiện rõ **đa hình – kế thừa – abstraction**
+## Câu 5 (Bonus +1 điểm)
+
+- In ra người có lương cao nhất  
 
 ---
 
-## 👉 GỢI Ý NÂNG ĐIỂM (RẤT HAY)
-Bạn có thể thêm cuối README:
+## 📌 YÊU CẦU CHẤM ĐIỂM (rất quan trọng)
 
-```md
-## 🧠 Ghi chú OOP
-- Phương thức `tinhLuong()` được xử lý bằng **đa hình**
-- Lớp `CONGTY` không cần biết đối tượng là `Worker` hay `Manager`
+- Dùng `ArrayList<Person>`  
+- Dùng đa hình (`Person p = new Worker()`)  
+- Không dùng `if` để tính lương  
+- Code chạy được  
