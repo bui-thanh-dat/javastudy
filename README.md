@@ -71,7 +71,22 @@ Lớp `RentalManager` (hoặc `VehicleService`) thực hiện các chức năng:
 
 ---
 
-#### 3. Yêu cầu về Lưu trữ (File I/O) (Bắt buộc)
+#### 3. Yêu cầu về Collections & Sorting (Nâng cao)
+
+Để luyện tập kỹ về Collection, yêu cầu cài đặt cụ thể như sau:
+1.  **Lưu trữ chính**: Sử dụng `ArrayList<Vehicle>` để quản lý danh sách.
+2.  **Tối ưu tìm kiếm**: Bên cạnh List, tạo thêm một `HashMap<String, Vehicle>` (Key là ID) để chức năng tìm kiếm theo ID đạt độ phức tạp O(1).
+3.  **Lọc duy nhất**: Sử dụng `HashSet` (hoặc `TreeSet`) để lấy ra danh sách các Hãng xe (Brand) có trong hệ thống mà không trùng lặp.
+4.  **Sắp xếp (Sorting)**:
+    -   **Comparable**: Class `Vehicle` phải implement `Comparable`. Mặc định sắp xếp xe theo `Year` (Năm sản xuất) tăng dần.
+    -   **Comparator**: Tạo 2 class riêng biệt (hoặc Anonymous Class/Lambda):
+        -   `PriceComparator`: Sắp xếp theo giá thuê giảm dần.
+        -   `BrandComparator`: Sắp xếp theo hãng sản xuất (A-Z).
+    -   *Yêu cầu*: Cho người dùng chọn tiêu chí sắp xếp trên Menu.
+
+---
+
+#### 4. Yêu cầu về Lưu trữ (File I/O) (Bắt buộc)
 - Khi chương trình tắt, tự động lưu danh sách xe vào file `vehicles.csv`.
 - Khi chương trình mở lên, tự động đọc dữ liệu từ `vehicles.csv` để nạp vào chương trình.
 - Format CSV ví dụ: `Type,ID,Brand,Year,Color,Price,ExtraParam`
@@ -95,16 +110,35 @@ Lớp `RentalManager` (hoặc `VehicleService`) thực hiện các chức năng:
 ---
 
 ### 🚧 Yêu cầu kỹ thuật chi tiết
-1.  **Custom Exceptions**:
-    - Tạo `DuplicateIDException`.
-    - Tạo `VehicleUnavailableException`.
-2.  **Validate dữ liệu**:
-    - Biển số xe phải đúng định dạng (dùng Regex - VD: có chứa ký tự và số).
-3.  **Cấu trúc thư mục**:
+1.  **Design Pattern (Bắt buộc)**:
+    -   **Factory Pattern**: Tạo class `VehicleFactory` theo mẫu Static Factory Method.
+        -   Phương thức: `public static Vehicle updateVehicle(String type, String id, ...)`
+        -   Sử dụng Factory này khi đọc dữ liệu từ file hoặc khi nhập từ bàn phím để khởi tạo đối tượng `Motorbike` hoặc `Truck`.
+2.  **Custom Exceptions**:
+    -   Tạo `DuplicateIDException`.
+    -   Tạo `VehicleUnavailableException`.
+3.  **Validate dữ liệu**:
+    -   Biển số xe phải đúng định dạng (dùng Regex - VD: có chứa ký tự và số).
+
+---
+
+### 📊 Thống kê & Báo cáo (Stream API Logic)
+Yêu cầu sử dụng **Stream API** và **Collectors** để thực hiện các chức năng sau:
+1.  **Thống kê tổng quan**:
+    -   Hiện thị: Tổng số xe, Giá thuê trung bình, Xe có giá thuê cao nhất.
+    -   *Gợi ý*: Sử dụng `DoubleSummaryStatistics`.
+2.  **Gom nhóm theo hãng**:
+    -   Hiển thị danh sách xe phân loại theo Hãng (Brand).
+    -   *Gợi ý*: Sử dụng `Collectors.groupingBy`.
+
+---
+
+### 📂 Cấu trúc thư mục chuẩn
     ```
     src/
      ├── model/          (Vehicle, Motorbike, Truck)
      ├── service/        (RentalService, IService)
+     ├── factory/        (VehicleFactory)
      ├── util/           (FileHelper, Validator, Formatter)
      ├── exception/      (Custom exceptions)
      └── Main.java
