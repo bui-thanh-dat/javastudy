@@ -1,3 +1,7 @@
+package model;
+
+import util.Borrowable;
+
 public abstract class Person implements Borrowable {
     protected String id;
     protected String name;

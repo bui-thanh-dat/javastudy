@@ -1,10 +1,10 @@
-# 🏗️ Day 08: Class, Object và Student
+# 🏗️ Day 08: Class, Object và model.Student
 
 ## 🎯 Mục Tiêu Hôm Nay
 
 - Hiểu khái niệm Class và Object trong OOP
 - Tạo class đầu tiên với các thuộc tính và phương thức
-- Thực hành với class Student
+- Thực hành với class model.Student
 - Nắm vững các nguyên tắc cơ bản của OOP
 
 ## 📚 Kiến Thức Cần Nắm
@@ -50,9 +50,9 @@ public class TenClass {
 
 ## 💻 Bài Tập Thực Hành
 
-### **Bài 1: Tạo class Student cơ bản**
+### **Bài 1: Tạo class model.Student cơ bản**
 ```java
-public class Student {
+public class model.Student {
     // Thuộc tính
     String name;
     int age;
@@ -78,28 +78,31 @@ public class Student {
 }
 ```
 
-### **Bài 2: Sử dụng class Student**
+### **Bài 2: Sử dụng class model.Student**
+
 ```java
+import model.Student;
+
 public class StudentTest {
     public static void main(String[] args) {
-        // Tạo object Student
+        // Tạo object model.Student
         Student student1 = new Student();
-        
+
         // Gán giá trị cho thuộc tính
         student1.name = "Nguyễn Văn A";
         student1.age = 20;
         student1.studentId = "SV001";
         student1.gpa = 3.5;
-        
+
         // Gọi phương thức
         student1.displayInfo();
-        
+
         // Tạo thêm object khác
         Student student2 = new Student();
         student2.name = "Trần Thị B";
         student2.age = 19;
         student2.studentId = "SV002";
-        
+
         // Tính GPA
         double[] scores = {8.5, 9.0, 7.5, 8.0};
         student2.calculateGPA(scores);
@@ -170,7 +173,7 @@ Và các phương thức:
 ### **Challenge 2: Hệ thống quản lý thư viện đơn giản**
 Tạo các class:
 - Book (như trên)
-- Library (quản lý danh sách sách)
+- service.Library (quản lý danh sách sách)
 - Member (thành viên thư viện)
 
 ## 📝 Kiến Thức Nâng Cao
@@ -221,14 +224,14 @@ public class Calculator {
 ## 🔧 Best Practices
 
 ### **1. Naming Conventions**
-- Class name: PascalCase (Student, Book, Car)
+- Class name: PascalCase (model.Student, Book, Car)
 - Method name: camelCase (displayInfo, calculateGPA)
 - Variable name: camelCase (studentName, bookTitle)
 - Constant: UPPER_CASE (MAX_SIZE, PI)
 
 ### **2. Encapsulation**
 ```java
-public class Student {
+public class model.Student {
     private String name;  // Private để bảo vệ dữ liệu
     
     public String getName() {  // Getter
@@ -247,7 +250,7 @@ Mỗi class chỉ nên có một trách nhiệm duy nhất.
 ## 🎯 Checklist Hoàn Thành
 
 - [ ] Hiểu khái niệm Class và Object
-- [ ] Tạo được class Student cơ bản
+- [ ] Tạo được class model.Student cơ bản
 - [ ] Tạo và sử dụng objects
 - [ ] Thêm phương thức cho class
 - [ ] Hoàn thành challenge Car

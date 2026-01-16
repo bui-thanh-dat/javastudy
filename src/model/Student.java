@@ -1,3 +1,7 @@
+package model;
+
+import util.Borrowable;
+
 import java.util.ArrayList;
 
 public class Student extends Person implements Borrowable {
@@ -16,9 +20,9 @@ public class Student extends Person implements Borrowable {
 
     @Override
     public void displayInfor(){
-        System.out.println("Student ID: " + studentId);
-        System.out.println("Student Name: "+ name);
-        System.out.println("Student class: "+ className);
+        System.out.println("model.Student ID: " + studentId);
+        System.out.println("model.Student Name: "+ name);
+        System.out.println("model.Student class: "+ className);
         System.out.println("Max books allowed: 3 ");
     }
 

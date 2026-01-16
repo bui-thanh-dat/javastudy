@@ -252,13 +252,13 @@ public class BatchInsert {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "your_password";
     
-    public static class Student {
+    public static class model.Student {
         String name;
         int age;
         String email;
         String phone;
         
-        public Student(String name, int age, String email, String phone) {
+        public model.Student(String name, int age, String email, String phone) {
             this.name = name;
             this.age = age;
             this.email = email;
@@ -266,7 +266,7 @@ public class BatchInsert {
         }
     }
     
-    public static void batchInsertStudents(List<Student> students) {
+    public static void batchInsertStudents(List<model.Student> students) {
         String sql = "INSERT INTO students (name, age, email, phone) VALUES (?, ?, ?, ?)";
         
         try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -275,7 +275,7 @@ public class BatchInsert {
             // Disable auto-commit for batch operations
             conn.setAutoCommit(false);
             
-            for (Student student : students) {
+            for (model.Student student : students) {
                 pstmt.setString(1, student.name);
                 pstmt.setInt(2, student.age);
                 pstmt.setString(3, student.email);
@@ -305,10 +305,10 @@ public class BatchInsert {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            List<Student> students = new ArrayList<>();
-            students.add(new Student("Nguyễn Văn A", 20, "a@email.com", "0123456789"));
-            students.add(new Student("Trần Thị B", 19, "b@email.com", "0987654321"));
-            students.add(new Student("Lê Văn C", 21, "c@email.com", "0123456780"));
+            List<model.Student> students = new ArrayList<>();
+            students.add(new model.Student("Nguyễn Văn A", 20, "a@email.com", "0123456789"));
+            students.add(new model.Student("Trần Thị B", 19, "b@email.com", "0987654321"));
+            students.add(new model.Student("Lê Văn C", 21, "c@email.com", "0123456780"));
             
             batchInsertStudents(students);
             

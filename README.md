@@ -41,10 +41,10 @@ Chương trình chạy **Console (Terminal)**.
 
 ## 🧱 Yêu cầu thiết kế OOP
 
-### 1️⃣ Lớp trừu tượng `Person`
+### 1️⃣ Lớp trừu tượng `model.Person`
 
 ```java
-public abstract class Person {
+public abstract class model.Person {
     protected String id;
     protected String name;
 
@@ -54,9 +54,9 @@ public abstract class Person {
 
 ---
 
-### 2️⃣ Các lớp kế thừa từ `Person`
+### 2️⃣ Các lớp kế thừa từ `model.Person`
 
-#### `Student`
+#### `model.Student`
 
 * Thuộc tính:
 
@@ -64,7 +64,7 @@ public abstract class Person {
   * `className`
 * Có thể mượn tối đa **3 cuốn sách**
 
-#### `Teacher`
+#### `model.Teacher`
 
 * Thuộc tính:
 
@@ -91,27 +91,27 @@ public abstract class Person {
 
 ---
 
-### 4️⃣ Interface `Borrowable`
+### 4️⃣ Interface `util.Borrowable`
 
 ```java
-public interface Borrowable {
+public interface util.Borrowable {
     boolean borrowBook(Book book);
     boolean returnBook(Book book);
 }
 ```
 
-➡️ `Student` và `Teacher` **implements Borrowable**
+➡️ `model.Student` và `model.Teacher` **implements util.Borrowable**
 
 ---
 
-### 5️⃣ Lớp `Library`
+### 5️⃣ Lớp `service.Library`
 
 Quản lý toàn bộ hệ thống
 
 * Danh sách:
 
   * `ArrayList<Book>`
-  * `ArrayList<Person>`
+  * `ArrayList<model.Person>`
 * Chức năng:
 
   * Thêm / xóa / sửa sách
@@ -174,13 +174,13 @@ Quản lý toàn bộ hệ thống
 ```text
 src/
  ├── model/
- │    ├── Person.java
- │    ├── Student.java
- │    ├── Teacher.java
+ │    ├── model.Person.java
+ │    ├── model.Student.java
+ │    ├── model.Teacher.java
  │    ├── Book.java
  ├── service/
- │    └── Library.java
+ │    └── service.Library.java
  ├── util/
- │    └── Borrowable.java
+ │    └── util.Borrowable.java
  └── Main.java
 ```

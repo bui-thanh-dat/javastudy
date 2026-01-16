@@ -29,10 +29,10 @@
 - **Day 07**: Ôn tập, Menu console
 
 ### **Tuần 2: Lập Trình Hướng Đối Tượng (OOP)**
-- **Day 08**: Class, Object, Student
+- **Day 08**: Class, Object, model.Student
 - **Day 09**: Constructor, Getter, Setter
 - **Day 10**: This, Static, Đếm số đối tượng
-- **Day 11**: Kế thừa, Person, Employee
+- **Day 11**: Kế thừa, model.Person, Employee
 - **Day 12**: Ghi đè phương thức, Shape, Circle, Rectangle
 - **Day 13**: Đa hình, Mảng Shape
 - **Day 14**: Ôn tập, Quản lý danh bạ

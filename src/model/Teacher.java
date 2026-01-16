@@ -1,3 +1,7 @@
+package model;
+
+import util.Borrowable;
+
 import java.util.ArrayList;
 
 public class Teacher extends Person implements Borrowable {
@@ -6,7 +10,7 @@ public class Teacher extends Person implements Borrowable {
     private ArrayList<Books> borrowedBooks = new ArrayList<>();
     private static final int MAX_TEACHER =  5;
 
-    Teacher(String id, String name, String teacherId, String department) {
+    public Teacher(String id, String name, String teacherId, String department) {
         this.id = id;
         this.name = name;
         this.teacherId = teacherId;
@@ -14,9 +18,9 @@ public class Teacher extends Person implements Borrowable {
     }
     @Override
     public void displayInfor(){
-        System.out.println("Teacher ID: " + teacherId);
-        System.out.println("Teacher Name: " + name);
-        System.out.println("Teacher Department : " + department);
+        System.out.println("model.Teacher ID: " + teacherId);
+        System.out.println("model.Teacher Name: " + name);
+        System.out.println("model.Teacher Department : " + department);
         System.out.println("Max books allowed: 5");
     }
 
@@ -33,7 +37,7 @@ public class Teacher extends Person implements Borrowable {
         if(!borrowedBooks.remove(book)) {
             return false;
         }
-        book.borrowOne();
+        book.returnOne();
         return true;
     }
 

@@ -11,14 +11,14 @@ Tuần thứ hai sẽ giúp bạn:
 
 ## 📅 Lộ Trình Chi Tiết
 
-### **Day 08: Class, Object, Student**
+### **Day 08: Class, Object, model.Student**
 - **Kiến thức**: Khái niệm Class và Object, tạo class đầu tiên
-- **Thực hành**: Tạo class Student với các thuộc tính cơ bản
+- **Thực hành**: Tạo class model.Student với các thuộc tính cơ bản
 - **Challenge**: Tạo class Book với nhiều thuộc tính
 
 ### **Day 09: Constructor, Getter, Setter**
 - **Kiến thức**: Constructor, encapsulation, access modifier
-- **Thực hành**: Cải thiện class Student với getter/setter
+- **Thực hành**: Cải thiện class model.Student với getter/setter
 - **Challenge**: Tạo class Rectangle với validation
 
 ### **Day 10: This, Static, Đếm số đối tượng**
@@ -26,9 +26,9 @@ Tuần thứ hai sẽ giúp bạn:
 - **Thực hành**: Đếm số đối tượng được tạo, static counter
 - **Challenge**: Tạo class BankAccount với static methods
 
-### **Day 11: Kế thừa, Person, Employee**
+### **Day 11: Kế thừa, model.Person, Employee**
 - **Kiến thức**: Inheritance, extends, super
-- **Thực hành**: Tạo hierarchy Person → Employee → Manager
+- **Thực hành**: Tạo hierarchy model.Person → Employee → Manager
 - **Challenge**: Xây dựng hệ thống quản lý nhân viên
 
 ### **Day 12: Ghi đè phương thức, Shape, Circle, Rectangle**
@@ -55,10 +55,10 @@ Tuần thứ hai sẽ giúp bạn:
 4. Implement interface Drawable cho các hình
 
 ### **Bài tập nâng cao:**
-1. Hệ thống quản lý thư viện (Book, Author, Library)
+1. Hệ thống quản lý thư viện (Book, Author, service.Library)
 2. Game đơn giản với các đối tượng (Player, Enemy, Item)
 3. Hệ thống đặt hàng (Customer, Product, Order)
-4. Quản lý trường học (Student, Teacher, Course)
+4. Quản lý trường học (model.Student, model.Teacher, Course)
 
 ## 🏆 Challenge Cuối Tuần
 
