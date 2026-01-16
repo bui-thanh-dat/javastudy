@@ -1,186 +1,119 @@
-Dưới đây là **1 đề tài BÀI TẬP LỚN OOP bằng Java Core** thường được dùng cho sinh viên năm 2–3. Đề này đủ lớn để áp dụng **OOP đầy đủ** (kế thừa, đa hình, đóng gói, abstraction), nhưng vẫn phù hợp Java Core (không cần Spring).
+# 🎓 BÀI TẬP LỚN JAVA CORE (OFFICIAL EXAM)
+## Đề bài: XÂY DỰNG HỆ THỐNG QUẢN LÝ THUÊ XE (VEHICLE RENTAL SYSTEM)
 
 ---
 
-# 📌 BÀI TẬP LỚN OOP – JAVA CORE
-
-## **HỆ THỐNG QUẢN LÝ THƯ VIỆN**
-
----
-
-## 🎯 Mục tiêu
-
-* Áp dụng **lập trình hướng đối tượng (OOP)** trong Java
-* Rèn luyện:
-
-  * Class & Object
-  * Encapsulation
-  * Inheritance
-  * Polymorphism
-  * Abstraction (abstract class / interface)
-* Làm việc với:
-
-  * Collection (`ArrayList`)
-  * Exception
-  * File I/O (nâng cao – tùy chọn)
+### 🎯 Mục tiêu
+Đánh giá toàn diện kiến thức Java Core:
+1.  **OOP (Lập trình hướng đối tượng)**: Kế thừa (Inheritance), Đa hình (Polymorphism), Trừu tượng (Abstraction), Đóng gói (Encapsulation).
+2.  **Java Collections Framework**: `ArrayList`, `HashMap`, `HashSet`, `Comparator`.
+3.  **Exception Handling**: Xử lý ngoại lệ (Try-catch, Custom Exception).
+4.  **File I/O**: Đọc ghi file (IO Stream / NIO).
+5.  **Java 8+ Features**: Lambda Expressions, Stream API.
+6.  **Clean Code & Architecture**: Tổ chức code theo mô hình lớp (Layered).
 
 ---
 
-## 🧩 Mô tả bài toán
+### 📝 Mô tả bài toán
+Một công ty cho thuê phương tiện cần quản lý các loại xe và hợp đồng cho thuê. Hệ thống cần quản lý được 2 loại phương tiện chính: **Xe máy (Motorbike)** và **Xe tải (Truck)**.
 
-Xây dựng chương trình **quản lý thư viện** cho phép:
+#### 1. Yêu cầu về OOP (Model)
 
-* Quản lý sách
-* Quản lý người dùng
-* Thực hiện mượn / trả sách
-* Thống kê và tìm kiếm
+**Lớp trừu tượng `Vehicle`**:
+- Thuộc tính:
+    - `String id` (Biển số xe - duy nhất)
+    - `String brand` (Hãng sản xuất)
+    - `int year` (Năm sản xuất)
+    - `String color` (Màu sắc)
+    - `double baseRentPrice` (Giá thuê cơ bản/ngày)
+- Phương thức abstract: `double calculateDailyRent()` (Tính giá thuê thực tế).
+- Phương thức: `displayInfo()`.
 
-Chương trình chạy **Console (Terminal)**.
+**Lớp `Motorbike` (Kế thừa `Vehicle`)**:
+- Thuộc tính riêng:
+    - `int capacity` (Dung tích - cc).
+- Override `calculateDailyRent()`:
+    - Nếu dung tích < 150cc: `baseRentPrice`.
+    - Nếu dung tích >= 150cc: `baseRentPrice * 1.5`.
 
----
+**Lớp `Truck` (Kế thừa `Vehicle`)**:
+- Thuộc tính riêng:
+    - `double loadWeight` (Trọng tải - tấn).
+- Override `calculateDailyRent()`:
+    - Giá thuê = `baseRentPrice + (loadWeight * 200.000)`.
 
-## 🧱 Yêu cầu thiết kế OOP
-
-### 1️⃣ Lớp trừu tượng `Person`
-
-```java
-public abstract class Person {
-    protected String id;
-    protected String name;
-
-    public abstract void displayInfo();
-}
-```
-
----
-
-### 2️⃣ Các lớp kế thừa từ `Person`
-
-#### `Student`
-
-* Thuộc tính:
-
-  * `studentId`
-  * `className`
-* Có thể mượn tối đa **3 cuốn sách**
-
-#### `Teacher`
-
-* Thuộc tính:
-
-  * `teacherId`
-  * `department`
-* Có thể mượn tối đa **5 cuốn sách**
-
-➡️ Áp dụng **đa hình** khi hiển thị thông tin.
+**Interface `Maintainable`**:
+- Phương thức: `void performMaintenance()`.
+- `Truck` phải implement interface này (Xe tải cần bảo trì định kỳ). `Motorbike` không bắt buộc.
 
 ---
 
-### 3️⃣ Lớp `Book`
+#### 2. Yêu cầu về Quản lý (Service Logic)
 
-* Thuộc tính:
+Lớp `RentalManager` (hoặc `VehicleService`) thực hiện các chức năng:
 
-  * `bookId`
-  * `title`
-  * `author`
-  * `quantity`
-* Phương thức:
-
-  * `isAvailable()`
-  * `displayInfo()`
-
----
-
-### 4️⃣ Interface `Borrowable`
-
-```java
-public interface Borrowable {
-    boolean borrowBook(Book book);
-    boolean returnBook(Book book);
-}
-```
-
-➡️ `Student` và `Teacher` **implements Borrowable**
+1.  **Thêm phương tiện mới**:
+    - Kiểm tra trùng mã (biển số). Nếu trùng ném ra ngoại lệ `DuplicateIDException`.
+    - Kiểm tra dữ liệu đầu vào (ví dụ: năm sản xuất không được lớn hơn năm hiện tại).
+2.  **Tìm kiếm phương tiện**:
+    - Tìm theo Hãng (Brand) (Dùng Stream API filter).
+    - Tìm theo Mã (ID).
+3.  **Cho thuê xe (Booking)**:
+    - Nhập vào `Customer ID` và `Vehicle ID`.
+    - Kiểm tra xe có sẵn không (Có thể thêm thuộc tính `boolean isRented` trong `Vehicle`).
+    - Nếu xe đã thuê, ném ngoại lệ `VehicleUnavailableException`.
+4.  **Trả xe & Tính tiền**:
+    - Nhập vào số ngày thuê.
+    - Tính tổng tiền = `calculateDailyRent() * days`.
+5.  **Sắp xếp danh sách**:
+    - Sắp xếp xe theo Giá thuê giảm dần (Dùng `Comparator` & Lambda).
+    - Sắp xếp xe theo Tên hãng (Alphabet).
 
 ---
 
-### 5️⃣ Lớp `Library`
-
-Quản lý toàn bộ hệ thống
-
-* Danh sách:
-
-  * `ArrayList<Book>`
-  * `ArrayList<Person>`
-* Chức năng:
-
-  * Thêm / xóa / sửa sách
-  * Thêm người dùng
-  * Cho mượn sách
-  * Trả sách
-  * Tìm sách theo tên / tác giả
-  * Hiển thị danh sách đang mượn
+#### 3. Yêu cầu về Lưu trữ (File I/O) (Bắt buộc)
+- Khi chương trình tắt, tự động lưu danh sách xe vào file `vehicles.csv`.
+- Khi chương trình mở lên, tự động đọc dữ liệu từ `vehicles.csv` để nạp vào chương trình.
+- Format CSV ví dụ: `Type,ID,Brand,Year,Color,Price,ExtraParam`
+  - `Motorbike,29-A1,Honda,2022,Red,100000,125`
+  - `Truck,50-C2,Hyundai,2020,Blue,500000,3.5`
 
 ---
 
-## 🖥️ Menu chương trình (Console)
-
+#### 4. Menu Chương trình (Console)
 ```text
-===== LIBRARY MANAGEMENT SYSTEM =====
-1. Thêm sách
-2. Hiển thị danh sách sách
-3. Thêm người dùng
-4. Mượn sách
-5. Trả sách
-6. Tìm kiếm sách
-7. Thoát
+=== VEHICLE RENTAL SYSTEM ===
+1. Add new vehicle (Motorbike/Truck)
+2. Show all vehicles
+3. Search vehicle by Brand
+4. Rent a vehicle
+5. Return a vehicle & Calculate fee
+6. Sort vehicles by Price
+7. Save & Exit
 ```
 
 ---
 
-## ⚠️ Yêu cầu xử lý Exception
+### 🚧 Yêu cầu kỹ thuật chi tiết
+1.  **Custom Exceptions**:
+    - Tạo `DuplicateIDException`.
+    - Tạo `VehicleUnavailableException`.
+2.  **Validate dữ liệu**:
+    - Biển số xe phải đúng định dạng (dùng Regex - VD: có chứa ký tự và số).
+3.  **Cấu trúc thư mục**:
+    ```
+    src/
+     ├── model/          (Vehicle, Motorbike, Truck)
+     ├── service/        (RentalService, IService)
+     ├── util/           (FileHelper, Validator, Formatter)
+     ├── exception/      (Custom exceptions)
+     └── Main.java
+    ```
 
-* Không cho mượn khi:
-
-  * Sách đã hết
-  * Vượt quá số lượng mượn tối đa
-* Xử lý nhập sai dữ liệu (`InputMismatchException`)
-
----
-
-## ⭐ Nâng cao (cộng điểm)
-
-* Lưu dữ liệu sách & người dùng vào file `.txt`
-* Đếm số lượt mượn của mỗi sách
-* Sắp xếp sách theo số lượt mượn
-* Áp dụng `enum` cho loại người dùng
-
----
-
-## 📦 Yêu cầu nộp bài
-
-* Code Java đầy đủ
-* Sơ đồ UML (class diagram)
-* File báo cáo:
-
-  * Mô tả bài toán
-  * Thiết kế OOP
-  * Hướng dẫn chạy chương trình
+### 🌟 Điểm cộng (Bonus)
+- Sử dụng **Singleton Pattern** cho lớp quản lý `RentalService`.
+- Tạo chức năng **Lịch sử thuê xe** (Ghi log mỗi lần thuê/trả vào file `history.txt`).
+- Sử dụng **Generics** để viết hàm tìm kiếm/sắp xếp chung.
 
 ---
-
-## 🧠 Gợi ý cấu trúc thư mục
-
-```text
-src/
- ├── model/
- │    ├── Person.java
- │    ├── Student.java
- │    ├── Teacher.java
- │    ├── Book.java
- ├── service/
- │    └── Library.java
- ├── util/
- │    └── Borrowable.java
- └── Main.java
-```
+**Chúc bạn hoàn thành tốt bài kiểm tra!**
