@@ -16,12 +16,54 @@ public class RentalManager {
         // xac thuc (validate) năm sản xuất
         int currentYear = Year.now().getValue();
         if(v.year > currentYear){ // neu year dang protected, neu private thi getter
-            throw new IllegalAccessError("Year cannot be greater than current year");
+            throw new IllegalArgumentException("Year cannot be greater than current year");
         }
+
         vehicles.add(v);
         vehicleMap.put(v.getId(), v);
     }
 
+    //Overload: them xe tu ban phim
+    public void addVehicle(Scanner sc) throws DuplicateIDException {
+
+        System.out.println("Type ( 1 = Motorbike, 2 = Truck) : ");
+        int type = Integer.parseInt(sc.nextLine());
+
+        System.out.println("Vehicle ID: ");
+        String id = sc.nextLine();
+
+        System.out.println("Brand: ");
+        String brand = sc.nextLine();
+
+        System.out.println("Year: ");
+        int year = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Color: ");
+        String color = sc.nextLine();
+
+        System.out.print("Price per day: ");
+        double price = Double.parseDouble(sc.nextLine());
+
+
+        Vehicle v;
+
+        if(type == 1){
+            System.out.println("Engine capacity (cc): ");
+            int engineCapacity = Integer.parseInt(sc.nextLine());
+
+            v = new Motorbike(id,brand, year, color, price, engineCapacity);
+        } else  if(type == 2){
+            System.out.println("Load capacity (tons): ");
+            double load = Double.parseDouble(sc.nextLine());
+
+            v = new Truck(id, brand, year, color, load);
+        } else {
+            throw new IllegalArgumentException("Invalid Vehicle Type");
+        }
+
+        //Goi ham Loi
+        addVehicle(v);
+    }
     // 2) Tìm theo ID (O(1))
     public  Vehicle findById(String id){
         return vehicleMap.get(id);
@@ -57,8 +99,8 @@ public class RentalManager {
         if(v == null){
             throw new IllegalArgumentException("Vehicle ID " + vehicleId + " not found");
         }
-        if(v.isRented()){
-            throw new IllegalArgumentException("Vehicle ID " + vehicleId + " is already rented");
+        if(!v.isRented()){
+            throw new IllegalArgumentException("Vehicle ID " + vehicleId + " is not currently  rented");
         }
         if(days <= 0){
             throw new IllegalArgumentException("Days must be greater than 0");

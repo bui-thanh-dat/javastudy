@@ -21,4 +21,10 @@ public class Truck extends Vehicle implements Maintainable {
     public void performMaintenance(){
         System.out.println("Truck" + id + " is under maintenance");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" | Load=%.2f tons", loadWeight);
+    }
+
 }

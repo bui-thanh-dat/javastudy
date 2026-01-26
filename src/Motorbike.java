@@ -19,4 +19,9 @@ public class Motorbike extends Vehicle{
         super.displayInfo();
         System.out.println("Motorbike's capacity is " + capacity + "cc");
     }
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" | Engine=%dcc", capacity);
+    }
+
 }

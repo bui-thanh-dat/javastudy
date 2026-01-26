@@ -28,8 +28,27 @@ public class Main {
             }
             switch(choice) {
                 case 1:
-                    manager.addVehicle(sc);
+                    try {
+                        manager.addVehicle(sc);
+                        System.out.println("Vehicle added successfully!");
+                  } catch (DuplicateIDException e) {
+                        System.out.println("Error: "+e.getMessage());
+                    } catch (Exception e) {
+                        System.out.println("Error: "+e.getMessage());
+                    }
                     break;
+
+                    case 2:
+                        List<Vehicle> list = manager.getVehicles();
+                        if(list.isEmpty()){
+                            System.out.println("Vehicles list is empty!");
+                        }
+                        else{
+                            for(Vehicle v : list){
+                                System.out.println(v);
+                            }
+                        }
+                        break;
             }
         }
 

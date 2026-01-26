@@ -30,5 +30,13 @@ public abstract class Vehicle {
        System.out.println("Year: " + year);
        System.out.println("Color: " + color);
        System.out.println("Base Rent Price: " + baseRentPrice);
-   };
+   }
+    @Override
+    public String toString() {
+        return String.format(
+                "ID=%s | Brand=%s | Year=%d | Color=%s | Price/Day=%.2f | Rented=%s",
+                id, brand, year, color, baseRentPrice, isRented ? "YES" : "NO"
+        );
+    }
+
 }
